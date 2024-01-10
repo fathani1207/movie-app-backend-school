@@ -1,0 +1,78 @@
+GET http://localhost:8080/api/v1/movies/comment/315162
+
+###
+
+GET http://localhost:8080/api/v1/movies/person/1569094
+
+###
+
+POST http://localhost:8080/api/v1/movies/movie
+Content-Type: application/json
+
+{
+  "id" : 569094,
+  "title" : "Spider-Man: Across the Spider-Verse"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies/person
+Content-Type: application/json
+
+{
+  "name" : "achraf"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies/comment
+Content-Type: application/json
+
+{
+  "content" : "testing for the 1st time the new post method for the comment service from the front",
+  "person": {
+    "id": 1,
+    "name": "youssef",
+    "username": "youssef",
+    "password": "fathani"
+  },
+  "movie": {
+    "id": 315162,
+    "title": "Puss in Boots: The Last Wish"
+  }
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies/person/favorite/2
+Content-Type: application/json
+
+{
+  "id": 569094,
+  "title": "Spider-Man: Across the Spider-Verse"
+}
+
+###
+
+DELETE http://localhost:8080/api/v1/movies/person/favorite/2?movie_id=569094
+
+###
+
+POST http://localhost:8080/api/v1/movies/person/login
+Content-Type: application/json
+
+{
+  "username": "ihab",
+  "password": "bokal"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies/person/signup
+Content-Type: application/json
+
+{
+  "name": "mehdi",
+  "username": "ihab",
+  "password": "mehdi"
+}
